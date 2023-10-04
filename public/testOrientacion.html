@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientacion Vocalcional</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="fondo-con-logos">
+    <div class="fondo-con-logos">
+        <form action="/procesar" method="post" id="formulario">
+            <!-- Sección 1 de preguntas -->
+            <div class="seccion-preguntas" id="seccion1">
+                <div class="contenedor-columnas">
+                    <!-- Primera columna -->
+                    <div class="columna">
+                        <script>
+                            console.log("Página HTML cargada!"); // Este mensaje aparecerá en la consola del navegador al cargar la página
+                        
+                            window.onload = function() {
+                                alert("¡Hola Mundo!");  // Este mensaje aparecerá como una ventana emergente cuando la página termine de cargar
+                            };
+                        </script>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <br>
+                        
+                        <label for="codigo">Código:</label>
+                        <input type="text" id="codigo" name="codigo" required>
+                        <br>
+                        
+                        <label for="lugarNacimiento">Lugar de nacimiento:</label>
+                        <input type="text" id="lugarNacimiento" name="lugarNacimiento" required>
+                        <br>
+                        
+                        <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                        <br>
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" required>
+                        <br>
+                    </div>
+                <!-- Segunda columna -->
+                    <div class="columna">
+                        <label for="estudioPrevio">¿Has estudiado antes en alguna universidad o instituto?</label>
+                        <br>
+                        <br>
+                        <select id="estudioPrevio" name="estudioPrevio" onchange="mostrarCamposAdicionales()">
+                            <option value="no">No</option>
+                            <option value="si">Sí</option>
+                        </select>
+                        <br>
+                        <br>
+                        <div id="camposAdicionales" style="display: none;">
+                            <label for="tiempoEstudio">¿Cuánto tiempo?</label>
+                            <input type="text" id="tiempoEstudio" name="tiempoEstudio">
+                            <br>
+                        
+                            <label for="lugarEstudio">¿Dónde?</label>
+                            <input type="text" id="lugarEstudio" name="lugarEstudio">
+                            <br>
+                        </div>
+                        
+                        
+                        <label for="carreraIngreso">¿A qué carrera ingresaste a la Universidad ESAN?</label>
+                        <input type="text" id="carreraIngreso" name="carreraIngreso" required>
+                        <br>
+                        
+                        <label for="carreraDeseada">¿A qué carrera deseas cambiarte?</label>
+                        <input type="text" id="carreraDeseada" name="carreraDeseada" required>
+                        <br>
+                    </div>
+                </div>
+            </div> 
+
+            <!-- Sección 2 de preguntas -->
+            <div class="seccion-preguntas" id="seccion2" style="display: none;">
+                <!-- Primera columna -->
+                <div class="contenedor-columnas">
+                    <div class="columna">
+                        <label for="conQuienVives">¿Con quién vives?</label>
+                        <input type="text" id="conQuienVives" name="conQuienVives" required>
+                        <br>
+                
+                        <label for="profesionPadre">¿Cuál es la profesión de tu padre?</label>
+                        <input type="text" id="profesionPadre" name="profesionPadre" required>
+                        <br>
+                
+                        <label for="profesionMadre">¿Cuál es la profesión de tu madre?</label>
+                        <input type="text" id="profesionMadre" name="profesionMadre" required>
+                        <br>
+                
+                        <label for="influenciaCarrera">¿Quién es la persona que más influyó en tu elección de carrera?</label>
+                        <input type="text" id="influenciaCarrera" name="influenciaCarrera" required>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 3 de preguntas -->
+            <div class="seccion-preguntas" id="seccion3" style="display: none;">
+                <!-- Primera columna -->
+                <div class="contenedor-columnas">
+                    <div class="columna">
+                        <label for="cursosPreferidos">¿Cuáles eran tus cursos preferidos?</label>
+                        <input type="text" id="cursosPreferidos" name="cursosPreferidos" required>
+                        <br>
+                
+                        <label for="cursosDesagradables">¿Cuáles eran los cursos que te desagradaban?</label>
+                        <input type="text" id="cursosDesagradables" name="cursosDesagradables" required>
+                        <br>
+                
+                        <label for="mejoresNotas">¿Cuáles eran los cursos en los que obtuviste las mejores notas?</label>
+                        <input type="text" id="mejoresNotas" name="mejoresNotas" required>
+                        <br>
+
+                        <label for="peoresNotas">¿Cuáles eran los cursos en los que obtuviste las peores notas?</label>
+                        <input type="text" id="peoresNotas" name="peoresNotas" required>
+                        <br>
+
+                        <label for="cursosDesaprobados">¿Qué cursos desaprobaste?</label>
+                        <input type="text" id="cursosDesaprobados" name="cursosDesaprobados" required>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 4 de preguntas -->
+            <div class="seccion-preguntas" id="seccion4" style="display: none;">
+                <!-- Primera columna -->
+                <div class="contenedor-columnas">
+                    <div class="columna">
+                        <label for="cursosPreferidos">¿Cuáles han sido o son tus cursos preferidos?</label>
+                        <input type="text" id="cursosPreferidos" name="cursosPreferidos" required>
+                        <br>
+                
+                        <label for="cursosDesagradables">¿Qué cursos te desagradan?</label>
+                        <input type="text" id="cursosDesagradables" name="cursosDesagradables" required>
+                        <br>
+                
+                        <label for="mejoresNotas">¿En qué cursos has obtenido las mejores notas?</label>
+                        <input type="text" id="mejoresNotas" name="mejoresNotas" required>
+                        <br>
+
+                        <label for="peoresNotas">¿En qué cursos has obtenido las peores notas?</label>
+                        <input type="text" id="peoresNotas" name="peoresNotas" required>
+                        <br>
+
+                        <label for="cursosDesaprobados">¿Qué cursos has desaprobado?</label>
+                        <input type="text" id="cursosDesaprobados" name="cursosDesaprobados" required>
+                        <br>
+
+                        <label for="cursosRetirados">¿De qué curso o cursos te has retirado alguna vez?</label>
+                        <input type="text" id="cursosRetirados" name="cursosRetirados" required>
+                        <br>
+
+                        <label for="cursosBICAS">¿Has llevado algún curso o cursos por segunda vez (BICAS)?</label>
+                        <input type="text" id="cursosBICAS" name="cursosBICAS" required>
+                        <br>
+
+                        <label for="cursosTRICAS">¿Has llevado algún curso o cursos por tercera vez (TRICAS)?</label>
+                        <input type="text" id="cursosTRICAS" name="cursosTRICAS" required>
+                        <br>
+
+                        <label for="cursosAlumnoLibre">¿Has asistido a algún curso o cursos como alumno libre?</label>
+                        <input type="text" id="cursosAlumnoLibre" name="cursosAlumnoLibre" required>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 5 de preguntas -->
+            <div class="seccion-preguntas" id="seccion5" style="display: none;">
+                <!-- Primera columna -->
+                <div class="contenedor-columnas">
+                    <div class="columna">
+                        <label for="motivoCambioCarrera">¿Cuál es el motivo por el que deseas cambiarte de carrera?</label>
+                        <input type="text" id="motivoCambioCarrera" name="motivoCambioCarrera" required>
+                        <br>
+
+                        <label for="motivoDudaCambio">¿Cuál es el motivo que te hace dudar de cambiarte de carrera?</label>
+                        <input type="text" id="motivoDudaCambio" name="motivoDudaCambio" required>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 6 de preguntas -->
+            <div class="seccion-preguntas" id="seccion6" style="display: none;">
+                <!-- Primera columna -->
+                <div class="contenedor-columnas">
+                    <div class="columna">
+                        <label for="amasHacer">¿Qué es lo que amas hacer?</label>
+                        <input type="text" id="amasHacer" name="amasHacer" required>
+                        <br>
+
+                        <label for="talentos">¿Cuáles consideras que son tus talentos?</label>
+                        <input type="text" id="talentos" name="talentos" required>
+                        <br>
+
+                        <label for="actividadGustaria">¿Qué actividad te gustaría realizar o consideras que haces bien?</label>
+                        <input type="text" id="actividadGustaria" name="actividadGustaria" required>
+                        <br>
+                        
+                        <label for="actividadRentable">¿Crees que esa actividad es rentable o que alguien te podría pagar por hacerla?</label>
+                        <input type="text" id="actividadRentable" name="actividadRentable" required>
+                        <br>                        
+
+                        <label for="necesidadMundo">Con una visión de negocio y de acuerdo a tus habilidades ¿Qué consideras es lo que el mundo necesita?</label>
+                        <input type="text" id="necesidadMundo" name="necesidadMundo" required>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección 7 de preguntas -->
+            <div class="seccion-preguntas" id="seccion7" style="display: none;">
+                <!-- Primera columna -->
+                <div class="contenedor-columnas">
+                    <div class="columna">
+                        <!-- Campo para subir imagen -->
+                        <label for="imagenHorario">Sube una imagen de tu horario:</label>
+                        <input type="file" id="imagenHorario" name="imagenHorario" accept="image/*" required><br>
+
+                        <!-- Campo para seleccionar días preferidos -->
+                        <label for="diasCita">¿Qué días preferirías para la cita?</label>
+                        <select id="diasCita" name="diasCita" required>
+                            <option value="" disabled selected>Selecciona un día</option>
+                            <option value="Lunes">Lunes</option>
+                            <option value="Martes">Martes</option>
+                            <option value="Miércoles">Miércoles</option>
+                            <option value="Jueves">Jueves</option>
+                            <option value="Viernes">Viernes</option>
+                        </select><br>
+                    </div>
+                </div>
+            </div>
+            <div class="botones-contenedor">
+                <button id="anterior" type="button">Anterior</button>
+                <button id="botonSiguiente" type="button">Siguiente</button>                
+                <!-- Otros botones que puedas tener -->
+            </div>
+            <input type="submit" value="Enviar" id="enviar" style="display: none;">
+        </form>
+    </div> 
+    <!-- Aquí es donde vinculas tu archivo JavaScript -->
+    <script src="script.js"></script>  
+</body>
+</html>
